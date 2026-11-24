@@ -14,7 +14,7 @@ A small home lab where I set up Wazuh as a SIEM, connected a Windows 10 machine 
 
 The agent registered with the server and shows as **active**.
 
-![Agent active](screenshots/2-01-agent-active.jpg)
+![Agent active](screenshots/agent-active.jpg)
 
 ## Scenario 1: Failed logins (brute force)
 
@@ -27,7 +27,7 @@ The agent registered with the server and shows as **active**.
 
 The single failures are low level. After several in a row, Wazuh raises the level 10 alert. That is the brute force signal.
 
-![Failed logins](screenshots/3-02-failed-logins.jpg)
+![Failed logins](screenshots/failed-logins.jpg)
 
 ## Scenario 2: New admin user
 
@@ -41,7 +41,7 @@ The single failures are low level. After several in a row, Wazuh raises the leve
 
 The level 12 alert for the Administrators group is the one to watch. It is how a privilege escalation or backdoor account would show up.
 
-![New admin user](screenshots/4-03-new-admin-user.jpg)
+![New admin user](screenshots/new-admin-user.jpg)
 
 ## Scenario 3: File integrity monitoring (FIM)
 
@@ -71,7 +71,7 @@ echo test > C:\LabTest\a.txt; Start-Sleep 5; echo changed >> C:\LabTest\a.txt; S
 
 The restart is also visible (rules `506` agent stopped and `503` agent started).
 
-![File integrity monitoring](screenshots/5-04-file-integrity.jpg)
+![File integrity monitoring](screenshots/file-integrity.jpg)
 
 ## Results
 
